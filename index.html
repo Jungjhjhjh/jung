@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PATCHWORK</title>
+	<style type="text/css">
+		@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+	@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: bold;
+}
+
+		html{font-family: 'Pretendard-Regular';}
+		html{word-break: keep-all;}
+		html,body,header,h1,h2,h3,p,ol,ul{margin: 0;}
+
+		header,footer{padding-top: 450px;}
+		header{padding: 300px 0px}
+		footer{padding-bottom: 100px;}
+		
+		section{background: ; }
+
+		.wrap{width: 600px; margin: auto; position: relative; }
+		.yellow{background-color: #D8ff8b;}
+		.gray{background-color: #343434;}
+		.center-text{text-align: center;}
+
+		h1{font-family: 'Pretendard-Black';font-weight: 800; font-size:3rem; padding-bottom: 40px;}
+	
+		img{width: 100%;display: block;height:auto;}
+		p{font-size:1.1rem;padding-top: 30px; padding-bottom: 50px; line-height: 1.6;}
+
+		header{display: block; unicode-bidi: isolate;}
+		h2{font-family: 'Pretendard-Black';font-weight:800;font-size:3rem;line-height:1.3;
+			margin: 194px 0px 20px;}
+
+		.left-spacing{padding-left:200px;}
+		.right-spacing{padding-right:180px;}
+		.no-margin{margin:0;}
+		.top{padding-top: 100px;}
+		.bottom{padding-bottom: 100px;}
+		.bottom2{padding-bottom: 200px;}
+		
+		.black{background: black}
+		.black h2{color: white}
+		.black p{color: white}
+		.shadow{text-shadow: 0.5px 0.5px 2px black;}
+		.magenta{background: magenta;}
+		.bg-white{background: white;}
+		.bg-black{background: black;}
+		.bg-patch{background: url(start.png);
+			background-size: cover;
+			background-position: center;}
+		.bg-mount{background: url(mount.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;}
+		.bg-dbfjq{background: url(dbfjq.png);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			height: 800px;}
+		.bg-guseo{background: url(guseo.jpg);
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;}
+		.america{position: absolute;
+				left:12px; top:1649px; width: 1064px;
+				height: auto;}
+		.star{position: absolute;
+				left:-520px; top:1450px; width: 480px;
+				height: auto; 
+				animation: spin 5s linear infinite;}
+		.log{position: absolute;
+				left:560px; top: 900px; width: 700px;
+				height: auto;
+				animation: spin 15s linear infinite;}
+		.double{position: absolute;
+					left: -500px; top:400px; width: 400px;
+					height: auto;
+					animation: spin 2s linear infinite;}
+		.europe{position: absolute;
+					left: 380px; top:-810px; width: 960px;
+					animation:move 3s ease-in-out infinite;}
+		.jungse{position: absolute;
+				top:325px; left:-384px;
+				width: 1250px;height: auto;}
+		.jungse2{position: absolute;
+				top: -286px; left:250px;
+				width:970px; height: auto;}
+		.clock{position: absolute;
+				left:650px; top: 400px; width: 500px;
+				height: auto;
+				animation: spin 5s linear infinite;}
+		.clock2{position: absolute;
+				left:-650px; top: 300px; width: 800px;
+				height: auto;
+				animation: spin 15s linear infinite;}
+		.clock3{position: absolute;
+				left:-650px; top: 180px; width: 400px;
+				height: auto;}
+		.clock5{position: absolute;
+				left:-550px; top: -100px; width: 600px;
+				height: auto;}
+		.clock6{position: absolute;
+				left:-550px; top: -180px; width: 300px;
+				height: auto;}
+		.clock7{position: absolute;
+				left:550px; top: -280px; width: 600px;
+				height: auto;
+				animation: spin 20s linear infinite;}
+		.clock8{position: absolute;
+				left:550px; top: 180px; width: 500px;
+				height: auto;}
+		.clock9{position: absolute;
+				left:650px; top: 730px; width: 300px;
+				height: auto;}
+		.patch{position: absolute;
+				left:-800px; top: 150px; width: 1200px;
+				animation:move 3s ease-in-out infinite;}
+		.point{position: absolute;
+				left:780px; top: 810px; width: 180px;}
+		.point2{position: absolute;
+				left:-380px; top: 1310px; width: 180px;}
+		.point3{position: absolute;
+				left:-480px; top: 760px; width: 200px;}
+		.double-t{position: absolute;
+				color:white; font-size: 1.5rem;
+				left: -335px; top: 905px;}
+		.log-t{position: absolute;
+				color:white; font-size: 1.5rem;
+				left: 748px; top: 786px; width: 200px;}
+		.star-t{position: absolute;
+				color:white; font-size: 1.5rem;
+				left: -325px; top: 1296px;}
+		.hand{position: absolute;
+				left:750px; top: 220px; width: 430px;}
+		.qksmf{position: absolute;
+				left:750px; top: 220px; width: 830px;}
+		header{padding: 350px 0px}
+		.white{color:white}
+		.red{color: red; font-size: 1.3rem;}
+		.neo{color:#D8ff8b}
+		.flex{display: flex; justify-content: space-between;}
+		.big{font-size:5rem;}
+		.white-box {
+    background-color:white;
+    padding: 10px 20px;
+    display: inline-block;
+	border: 0.5px solid black;
+	margin-top: 200px;}
+		.white-box1 {
+    background-color:white;
+    padding: 10px 20px;
+    display: inline-block;
+	border: 0.5px solid black;
+	}
+		background-size: cover;
+		background-position:center;}
+		header{padding: 250px 0px;}
+		header h2{font-size:1rem; }
+		header .wrap {
+    text-align: center;}
+
+		/*css animation definition*/
+		@keyframes glow{
+				from{text-shadow: 0px 0px 0px #bfff00;}
+				to{text-shadow: 0px 0px 13px #bfff00;}
+			}
+		@keyframes spin{0%{transform: rotate(0deg);}
+					100%{transform: rotate(360deg);}}
+		@keyframes move{0%{transform: rotate(-5deg);}
+					50%{transform: rotate(5deg);}
+					100%{transform: rotate(-5deg);}}
+
+		ul,il{list-style: none;}
+		ul li a{text-decoration: none;
+				display:block;
+				padding: 8px 12px;
+				}
+			footer{padding: 0px 250px;}
+		
+		}
+    </style>
+    </head>
+<body>
+	<nav>
+		<div class="wrap flex">
+			<div class="logo">
+			<h1 style="font-size:2rem; padding-bottom: 0;">PATCHWORK</h1>
+		</div>
+			<ul class="flex">
+				<li><a href="#">의미</a></li>
+				<li><a href="#">이집트</a></li>
+				<li><a href="#">유럽</a></li>
+				<li><a href="#">미국</a></li>
+				<li><a href="#">현대</a></li>
+			</ul>
+		</div>
+	<section>
+	<header class="bg-patch">
+		<div class="wrap">
+			<h1 class="center-spacing center-text big neo" style="padding-bottom: 50px;">
+			PATCHWORK</h1>
+			<p class="center-spacing center-text white-box1">패치워크의 역사와 유래에 대해 알아봅시다.</p>
+		</div>
+	</header>
+	</section>
+	<section class="yellow" style="text-align: center;">
+
+		<div class="wrap">
+		</div>
+	</section>
+
+	<section class="yellow" style="text-align: center;">
+		<div class="wrap">
+			
+			<p class="center-spacing center-text white-box">패치워크가 무슨 뜻일까?</p>
+			<p class="center-spacing center-text red">패치워크(patchwork):
+			<p class="center-spacing center-text bottom2">바느질감의 일종 / 수예의 한 종류<br>
+				작은 천 조각들을 이어서 하나의 큰 천이나 직물을 만드는 것<br>반복 패턴에 기반을 두는 것이 일반적
+				<br>옷감의 재활용에서 시작된 실용적인 방법</p>
+		<div class="hand"><img src="hand.png"></div>
+		<div class="qksmf"><img src="qksmf.png"></div>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<h2 class="center-spacing center-text">패치워크는 언제, 어디서<br>처음 만들어졌을까요?</h2>
+			<p class="center-spacing center-text bottom" style="font-size: 1.3rem;">고대 이집트로 거슬러 올라가 패치워크의 흔적을 찾아봅시다.
+			<p class="center-spacing center-text bottom" style="font-size: 3rem;">.<br><br>.<br><br>.</p>
+			<div class="clock"><img src="clock.png"></div>
+			<div class="clock2"><img src="clock2.png"></div>
+			<div class="clock3"><img src="clock4.png"></div>
+			<div class="clock5"><img src="clock5.png"></div>
+			<div class="clock6"><img src="clock6.png"></div>
+			<div class="clock7"><img src="clock7.png"></div>
+			<div class="clock8"><img src="clock8.png"></div>
+			<div class="clock9"><img src="clock9.png"></div>
+		</div>
+	</section>
+	<section class="bg-mount white" style="text-shadow: 0.5px 0.5px 2px black">
+		<div class="wrap">
+			<h2 class="center-spacing center-text"style="padding-top: 200px;">절약을 위한 패치워크</h2>
+			<p class="center-spacing center-text">이집트는 패치워크라는 개념이 고고학적으로 발견된 가장 오래된<br>장소예요.
+				천이나 직물은 인류 문명 이전부터 사용되었지만 조각 천을<br>이어 만든 구조물은 고대 이집트에서 가장 먼저 발견되었어요.</p>
+			<p class="center-spacing center-text">기원전 3400년 전 유물인 이집트 고대 벽화와 미라를 포장한<br>천 안에서
+					조각 천을 이어붙인 직물을 찾아볼 수 있어요. 이 시기<br>이집트 사람들은 린넨 직조 기술을 고도로 발전시킨 상태였기 때문에<br>천을 자르고 이어붙여 새로운 형태를 만드는 것이 가능했어요.</p>
+			<p class="center-spacing center-text" style="padding-top: 300px;">고대 이집트는 직물 생산이 꽤 발달한 상태였지만 천은 아직<br>
+				귀한 자원이었어요. 그래서 옷이 닳거나 찢어져도 남은 천을 덧대<br>재활용하기 위한 실용적 이유 때문에 패치워크가 등장했어요. 
+			<p class="center-spacing center-text">이집트에서는 사후 세계가 중요하게 여겨졌기에 미라를 감싸는 옷을<br>정성스레 만들었는데 이 중 	일부가 조각을 조합한 패치형<br>형태를 띄고 있기도 해요.</p>
+			<img src="1. egypt.png">
+			<p class="center-spacing center-text"style="padding-top: 90px;">이때는 기능적 용도로만 패치워크를 사용했기 때문에 현존하는<br>패치워크처럼
+				정교하거나 정형화된 패턴은 찾아볼 수 없어요.<br>우리가 알고 있는 예술적 패턴을 가진 패치워크 퀼트는<Br>
+			중세 유럽 이후로 조금씩 발달하기 시작했어요.</p>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<h2 class="center-spacing">중세 유럽에서 발생한 패치워크의 발전</h2>
+				<p class="right-spacing">중세 유럽으로 넘어온 패치워크는 수선 기술을 넘어<br>장식용 의미를 가지게 됐어요.
+				  	 가난한 계층에게는<br>직물이 사치였기 때문에 옷을 오래 입고 기워 입는<br>문화가 자연스러워졌어요. 서양에서는<br>
+				   	'patched'라는 단어가 가난한, 누더기를 입은 이라는 의미를 가지게 되기도 했죠. 이처럼 패치워크는
+				   	생활 속<br>절약을 위해 사용되는 것이 대부분이었어요.</p>
+			 	<p class="right-spacing" style="padding-bottom: 800px;">11~13세기 십자군 원정으로 유럽이 중동과 비잔틴의<br>직물
+			 		문화를 접하게 되며 모자이크와 기하학적 패턴을 유럽도 사용하게 되었어요. 특히 기하학적<br>문양을 직물에 구현하려는 시도가
+					중세 유럽의<br>패치워크에 영향을 주었어요.</p>
+				<div class="jungse2"><img src="jungse2.png"></div>
+				<div class="jungse"><img src="jungse.png"></div>
+	</div></section>
+	<section class="yellow">
+		<div class="wrap">
+				<p class="center-spacing center-text top">패치워크는 가난한 사람만의 문화가 아니었어요. 성직자나<br>종교 단체들은 성직 복식과
+					성물 보관용 천을 직접 제작하곤 했는데<br>이때 직물이 비쌌기 때문에 작은 조각까지 버리지 않고<br>보관했어요.
+					나중에 이를 오늘날의 콜라주 형태로 조합하여<br>하나의 큰 망토나 제단보를 만들곤 했어요.<br>이는 기능보다는 장식적, 의례적 가치 때문에
+					이루어진<br>초기 예술적 패치워크로 평가되고 있어요.</p>
+				</div>
+			</section>
+				<section class="bg-dbfjq">
+    			<div class="wrap">
+       			 </div>
+				</section>
+				<section class="yellow">
+				<div class="wrap">
+				<p class="center-spacing center-text" style="padding-top: 200px;">중세 말에는 직물의 가격이 저렴해지고 종류도 다양해지며<br>
+					패치워크를 빈틈을 메우는 용도로만 사용하지 않고 의도적으로<br>패턴을 만드는 용도로 사용하기 시작해요. 
+				<p class="center-spacing center-text bottom">영국과 프랑스의 귀족들은
+					실크 천을 이어붙여 식탁보나<br>벽걸이를 만들어 소장하기도 했어요. 바로 이 흐름이<br>나중에 식민지인 미국까지 이어져
+					18, 19세기 미국<br>퀼트 문화의 출발점이 됐어요.</p>
+				<div class="europe"><img src="europe.png"></div>
+		</div>
+	</section>
+	<section class="gray white">
+		<div class="wrap">
+			<h2 class="center-spacing center-text no-margin" style="padding-top: 200px;">19세기 미국의 퀼트 문화</h2>
+			<p class="center-spacing center-text">18세기 후반부터 19세기는 유럽에서 이주한 정착민들이 미국에 농가를<br>
+				세우던 시기였어요. 산업화 이전이라 천이 귀했고 수입 원단은 굉장히<br>비쌌어요. 여성들은 헌 옷이나 자투리 천 조각을 재활용해서
+			새로운 천을<br>만들기 시작했고 이게 바로 미국 퀼트 문화의 시작이 되었어요.</p>
+			<p class="center-spacing center-text">특히 흑인 여성들은 노예 신분으로서 천을 구하기 어려워 주인 집의<br>
+			헌 천을 모아 퀼트를 만들었어요. 이 중 일부는 비밀 메시지를 담은<br>
+			코드 퀼트(Code Quilt)로도 알려져 있어요. 지하철도와 같은 탈출 통로<br>
+			에서 지도나 신호 역할을 했다는 설화 같은 이야기도 전해지고 있어요. </p>
+			<img src="usa1.png">
+			<p class="right-spacing" style="padding-top: 40px;">
+				여성들은 집안일과 육아에 묶여 있었지만, 
+				퀼트를 통해<br>창의성을 발휘하고 이웃 여성들과 소통했어요.
+				농한기가<br>찾아오면 마을 여성들이 모여 퀼트를 함께 만드는<br>
+				퀼팅 비(Quilting Bee)라는 모임을 열곤 했어요.<br>
+				이로 인해 퀼팅은 여성들의 연대와 우정을 상징했어요.</p>
+			<p class="right-spacing" style="padding-top: 200px;">
+				대표적인 미국 전통 퀼트 패턴에는 가정과 따뜻한 불빛을 의미하는 Log Cabin(통나무집), 
+				희망과 신앙을<br>상징하는 별 패턴, 결혼을 축하하고 사랑과 연합을<br>뜻하는 더블 웨딩 링이 있어요.</p>
+			<p class="right-spacing"style="padding-top: 200px;">이처럼 퀼트는 만드는 사람의<br>
+				가치관, 신앙, 가족사를 드러내는<br>시각적 기록물이 되었어요.
+				집에 상주해야<br>했던 여성들이나 노예 신분이었던<br>흑인들이 억압 속에서 자유를<br>염원하는 예술적 상징물로서<br>
+			사용하기도 했어요.</p>
+			<div class="america"><img src="america2.png"></div>
+			<div class="star"><img src="star.png"></div>
+			<div class="log"><img src="log.png"></div>
+			<div class="double"><img src="double.png"></div>
+			<div class="point"><img src="point.png"></div>
+			<div class="point2"><img src="point2.png"></div>
+			<div class="point3"><img src="point3.png"></div>
+			<div class="double-t">Double Wedding Ring<br>Pattern</div>
+			<div class="log-t">Log Pattern</div>
+			<div class="star-t">Star Pattern</div>
+		</div>
+	</section>
+	<section class="bg-guseo">
+		<div class="wrap">
+			<h2 class="center-spacing center-text white shadow no-margin"style="padding-top: 200px;
+			padding-bottom:550px;">
+			현대의 지속가능한 패치워크</h2>
+			<p class="center-spacing center-text white-box" style="margin-bottom: 200px;">1971년 뉴욕 휘트니 미술관에서 열린 "Abstract Design in<br>
+				American Quilts" 전시 이후 미국뿐만 아니라 유럽, 일본 등에서도<br>아트 퀼트 장르가 생겨났어요. 
+				퀼트는 모더니즘 회화와 동등한 시각예술로 다뤄지게 되었고 조형적 패턴, 실험적 색감, 추상적 메시지를<br>
+				담은 여러가지 퀼트 작품들이 전세계 곳곳에서 제작되기 시작했어요.</p>
+			</div>
+	</section>
+	<section class="gray white bottom">
+		<div class="wrap">
+			<img src="whitney.jpg" style="padding-top: 100px">
+			<p class="right-spacing" style="padding-top: 100px;">산업화와 함께 기성 제품이 많아졌지만 사람들은<br>손으로 만드는 따뜻함을 다시 찾기 시작했어요.<br>
+				1980~90년대엔 미국, 영국, 일본에서 패치워크<br>취미 문화가 크게 퍼졌고 잡지나 패턴북 클래스가<br>생겨나며 퀼트 커뮤니티가 다시 활발해졌어요.<br> 이 시기의 패치워크는 전통 패턴을<br>현대적으로 재해석하거나 다양한 천 재질을 섞어<br>인테리어용으로도 발전했어요.</p>
+			<p class="left-spacing" style="padding-top: 100px;padding-bottom: 200px;">최근 패치워크는 버려지는 천을 다시 이어 생명을<br>주는 기법으로 환경, 윤리적 소비와 연결돼요.<br>패션 브랜드들도 업사이클링 라인에서 패치워크를<br>적극 활용하고 있어요. 지금의 패치워크는 단순한 공예<br>가 아니라 환경적 가치를 살리고 개셩 표현을 동시에<br>할 수 있는 소중한 문화로 여겨져요.<br>나만의 매력적인 패치워크를 만들어 빈티지한<br>감성과 환경을 동시에 챙겨보는 건 어떨까요?</p>
+			<img src="last.jpg">
+			<div class="patch"><img src="patch.png"></div>
+		</div>
+	</section>
+
+</body>
+<footer class="yellow">
+		<nav>
+		<div class="wrap flex" style="padding-top: 100px; padding-bottom: 100px;">
+			<div class="logo">
+			<h1 style="font-size:2rem; padding-bottom: 0;">PATCHWORK</h1>
+		</div>
+			<ul class="flex">
+				<li><a href="#">connect</a></li>
+				<li><a href="#">information</a></li>
+				<li><a href="#">community</a></li>
+				<li><a href="#">support</a></li>
+				<li><a href="#">More</a></li>
+			</ul>
+	</footer>
+</html>
